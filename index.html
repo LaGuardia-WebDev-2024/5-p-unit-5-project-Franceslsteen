@@ -16,17 +16,137 @@ Select TWO Additional Features to Add
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <title>Unit 5 Project</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background-color: #6b4423; /* warm brown background */
+        min-height: 100vh;
+        margin: 0;
+        text-align: center;
+        font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        color: #D4AF37; /* gold text */
+      }
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
+      /* Headings and display text use a bold, modern display font */
+      h1,
+      h3,
+      #gifts,
+      .flip-card-front,
+      .flip-card-back {
+        font-family: 'Bebas Neue', 'Poppins', sans-serif;
+        letter-spacing: 1px;
+      }
 
-  </style>
-</head>
-<body>
+      .flip-card {
+        background-color: transparent;
+        width: 400px;
+        height: 500px;
+        perspective: 1000px;
+        margin: auto;
+      }
 
- 
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
 
-</body>
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        font-size: 40px;
+      }
+
+      .flip-card-front {
+        background-color: transparent;
+        color: #D4AF37;
+      }
+
+      .flip-card-back {
+        background-color: #FFEB99; /* light yellow highlight */
+        color: #3e2b22; /* dark brown for contrast */
+        transform: rotateY(180deg);
+      }
+      #title {
+        color: #D4AF37;
+      }
+      h1 {
+        font-size: 50px;
+        background-color: #FFD54F; /* stronger yellow for heading highlights */
+        color: #3e2b22; /* dark text on yellow */
+      }
+      h3 {
+        font-size: 35px;
+        background-color: #FFEB99;
+        width: 650px;
+        margin: auto;
+      }
+      #gifts {
+        font-size: 45px;
+        color: #3e2b22;
+        background-color: #FFD54F;
+        width: 200px;
+        margin: auto;
+      }
+      .flexgive {
+        display: flex;
+        justify-content: center;
+      }
+      .flexgive img {
+        background-color: #FFEB99;
+        margin: 40px;
+        padding: 5px;
+        font-size: 30px;
+        text-align: center;
+      }
+      p {
+        background-color: #FFEB99;
+        color: #3e2b22;
+      }
+    </style>
+  </head>
+  <body>
+    <span id="title">
+      <h1>FRANCES HAS AN EGOT!</h1>
+      <h3> PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY</h3>
+      <br />
+      
+    </span>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://i.scdn.co/image/ab67616d00001e0266e98a0bfe73628a77adf0b2"
+    
+            style="width: 400px; height: 500px; object-fit: cover"
+          />
+        </div>
+        <div class="flip-card-back">
+          <h1>Frances has WON a Grammy, a Tony, an Oscar, and an Emmy</h1>
+          <p>Party at my house!</p>
+          <p></p>
+          <p>Bring EVERYONE</p>
+        </div>
+      </div>
+    </div>
+    <br />
+
+  </body>
 </html>
